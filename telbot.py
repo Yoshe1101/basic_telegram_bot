@@ -7,7 +7,6 @@ f = open('/home/joseba/credentials/keys.json',)
 data = json.load(f)
 token = data["keys"]["telegram_key"]
 
-
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
@@ -34,7 +33,6 @@ def mensajes(update: Update, context: CallbackContext) -> None:
         frases = ["Pues ok","muy bien","ahora no tengo tiempo","mañana lo miramos"]
         update.message.reply_text(random.choice(frases))
     
-
 # def echo(update: Update, context: CallbackContext) -> None:
 #     """Echo the user message."""
 #     update.message.reply_text(update.message.text)    
@@ -54,7 +52,6 @@ def main() -> None:
 
     updater.start_polling()
     updater.idle()
-
 
 if __name__ == '__main__':
     main()
