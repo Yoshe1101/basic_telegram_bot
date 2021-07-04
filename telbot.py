@@ -7,6 +7,7 @@ f = open('/data/projects/credentials.json',)
 data = json.load(f)
 token = data["keys"]["telegram_key"]
 
+
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
