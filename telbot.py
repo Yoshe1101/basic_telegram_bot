@@ -3,7 +3,7 @@ from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 import random
 #reading the credentials from secure plase
-f = open('/home/joseba/credentials/keys.json',)
+f = open('/data/projects/credentials.json',)
 data = json.load(f)
 token = data["keys"]["telegram_key"]
 
